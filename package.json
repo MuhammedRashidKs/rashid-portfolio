@@ -1,0 +1,7 @@
+{
+  "name": "rashid-portfolio",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "mongodb": "^6.8.0" }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammed Rashid KS | Portfolio</title>
+  <meta name="theme-color" content="#09271d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2309271d'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='bold' text-anchor='middle' fill='%23a5e6b9'%3EMR%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="#home">PORTFOLIO<span>.</span></a>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a><a href="#about">About</a>
+        <a href="#skills">Skills</a><a href="#achievements">Achievements</a>
+        <a href="#projects">Projects</a><a href="#hobbies">Hobbies</a>
+        <a href="#manager">Manager</a><a href="#contact">Contact</a>
+        <form action="/logout" method="POST"><button class="logout" type="submit">Logout</button></form>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">COMPUTER SCIENCE STUDENT · CREATIVE THINKER</p>
+          <h1>Building ideas<br>into <span>reality.</span></h1>
+          <p class="hero-description">I'm Muhammed Rashid KS, a BSc Computer Science student interested in technology, design and creating useful digital experiences.</p>
+          <div class="hero-buttons"><a class="button button-green" href="#about">Discover more</a><a class="button button-light" href="#projects">View my work</a></div>
+          <div class="hero-note"><span class="green-dot"></span> Currently learning and growing</div>
+        </div>
+        <div class="hero-card">
+          <div class="portrait"><img src="/rashid.jpg" width="138" height="138" alt="Muhammed Rashid KS" onerror="this.style.display='none';document.getElementById('initials').style.display='grid'"><span id="initials">MR</span></div>
+          <p class="card-label">STUDENT PORTFOLIO</p>
+          <h2>Muhammed Rashid KS</h2>
+          <p class="muted">BSc Computer Science & Mathematics</p>
+          <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>MongoDB</span></div>
+          <div class="card-bottom"><span>KRISTU JAYANTI UNIVERSITY</span><span>2026 — 2029</span></div>
+        </div>
+      </div>
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+    </section>
+
+    <section class="section" id="about"><div class="container">
+      <div class="section-title"><p class="eyebrow">01 / INTRODUCTION</p><h2>A little <span>about me</span></h2><p>Getting to know the person behind the work.</p></div>
+      <div class="about-layout">
+        <div class="about-text"><h3>Hello, I'm Rashid.</h3><p>I am a BSc Computer Science and Mathematics student at Kristu Jayanti (Deemed to be University), Bengaluru. I enjoy learning how technology works and using creativity to build useful things.</p><p>This website is my personal portfolio. It brings together my education, skills, achievements, projects and interests in one place.</p></div>
+        <div class="fact-grid">
+          <div class="fact"><small>EDUCATION</small><strong>BSc CS & Mathematics</strong></div>
+          <div class="fact"><small>UNIVERSITY</small><strong>Kristu Jayanti University</strong></div>
+          <div class="fact"><small>ROLL NUMBER</small><strong>26CSMM11</strong></div>
+          <div class="fact"><small>LOCATION</small><strong>Bengaluru, India</strong></div>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section" id="skills"><div class="container">
+      <div class="section-title"><p class="eyebrow">02 / MY ABILITIES</p><h2>Skills & <span>knowledge</span></h2><p>Things I am learning and practising.</p></div>
+      <div class="cards" data-list="Skill"></div>
+    </div></section>
+
+    <section class="section section-soft" id="achievements"><div class="container">
+      <div class="section-title"><p class="eyebrow">03 / MILESTONES</p><h2>Personal <span>achievements</span></h2><p>Certificates, milestones and learning experiences.</p></div>
+      <div class="cards" data-list="Achievement"></div>
+    </div></section>
+
+    <section class="section" id="projects"><div class="container">
+      <div class="section-title"><p class="eyebrow">04 / MY WORK</p><h2>Selected <span>projects</span></h2><p>A collection of things I have created.</p></div>
+      <div class="cards" data-list="Project"></div>
+    </div></section>
+
+    <section class="section section-soft" id="hobbies"><div class="container">
+      <div class="section-title"><p class="eyebrow">05 / BEYOND THE SCREEN</p><h2>Things I <span>enjoy</span></h2><p>Activities that keep me inspired.</p></div>
+      <div class="hobby-list" data-list="Hobby"></div>
+    </div></section>
+
+    <section class="section" id="manager"><div class="container">
+      <div class="section-title"><p class="eyebrow">06 / YOUR SPACE</p><h2>Portfolio <span>manager</span></h2><p>Add, update or remove information. Your items are stored in MongoDB.</p></div>
+      <div class="manager-layout">
+        <form class="panel" id="itemForm" autocomplete="off">
+          <h3 id="formTitle">Add a new item</h3>
+          <input type="hidden" name="id" id="itemId" value="">
+          <label for="itemTitle">Title</label><input type="text" id="itemTitle" name="title" maxlength="100" required>
+          <label for="itemCategory">Category</label><select id="itemCategory" name="category" required>
+            <option>Skill</option><option>Achievement</option><option>Project</option><option>Hobby</option>
+          </select>
+          <label for="itemDescription">Description</label><textarea id="itemDescription" name="description" maxlength="500" required></textarea>
+          <button class="button button-green full" id="itemSubmit" type="submit">Add item</button>
+          <a class="form-hint" id="cancelEdit" href="#manager" hidden>Cancel editing</a>
+          <p class="form-hint">You can edit or delete saved information at any time.</p>
+        </form>
+        <div class="panel saved-panel"><div class="saved-heading"><h3>Saved items</h3><span class="count"><span id="itemCount">0</span> items</span></div><div id="managerItems"></div></div>
+      </div>
+    </div></section>
+
+    <section class="section section-soft" id="contact"><div class="container">
+      <div class="section-title"><p class="eyebrow">07 / GET IN TOUCH</p><h2>Let's <span>connect</span></h2><p>Have a question or want to work together? Send me a message.</p></div>
+      <div class="contact-layout">
+        <div class="contact-card"><p class="eyebrow">CONTACT DETAILS</p><h3>I'd love to hear from you.</h3><div class="contact-line"><small>EMAIL</small><a href="mailto:mhdrashidkss@gmail.com">mhdrashidkss@gmail.com</a></div><div class="contact-line"><small>PHONE</small><a href="tel:+919995504454">+91 99955 04454</a></div><div class="contact-line"><small>COLLEGE</small><span>Kristu Jayanti University, Bengaluru</span></div></div>
+        <form class="panel" id="contactForm">
+          <h3>Send a message</h3>
+          <label for="contactName">Your name</label><input id="contactName" name="name" maxlength="100" required placeholder="Your name">
+          <label for="contactEmail">Email address</label><input id="contactEmail" name="email" type="email" maxlength="150" required placeholder="you@example.com">
+          <label for="contactMessage">Message</label><textarea id="contactMessage" name="message" maxlength="2000" required placeholder="Write your message"></textarea>
+          <button class="button button-green full" id="contactSubmit" type="submit">Send message</button>
+        </form>
+      </div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container"><p>Muhammed Rashid KS · 26CSMM11</p><p>BSc Computer Science & Mathematics · Kristu Jayanti University</p><small>© 2026 All rights reserved.</small></div></footer>
+  <div class="toast-wrap" id="toastWrap" aria-live="polite" role="status"></div>
+  <!--INITIAL_DATA-->
+  <script src="script.js"></script>
+</body>
+</html>
